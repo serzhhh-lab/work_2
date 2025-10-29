@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Мои заметки</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="menu">
+            <h1 class="menu_title">Мои заметки</h1>
+            <button class="menu_button" id="newNoteButton">Новая заметка</button>
+            <h2 class="tegs">Теги</h2>
+            <div id="TagsList">
+                <div class="tegs_li active" data-tag="1">Все</div>
+                <div class="tegs_li" data-tag="2">Идеи</div>
+                <div class="tegs_li" data-tag="3">Личное</div>
+                <div class="tegs_li" data-tag="4">Работа</div>
+                <div class="tegs_li" data-tag="5">Список покупок</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="search">
+                <input type="text" class="forma_input" id="searchText" placeholder="Поиск по заметкам">
+                <button class="search_button" id="ButtonSearch"></button>
+            </div>
+
+            <div class="zadachi" id="list">
+                <div class="empty-state">Заметок пока нет</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay">
+        <div class="modal">
+            <h3>Новая заметка</h3>
+            <input type="text" class="modal-input" id="ModalTitle" placeholder="Введите текст заметки">
+            <select class="modal-select" id="ModalSelect">
+                <option value="2">Идеи</option>
+                <option value="3">Личное</option>
+                <option value="4">Работа</option>
+                <option value="5">Список покупок</option>
+            </select>
+            <div class="modal-buttons">
+                <button class="modal-button" id="ModalButtonSave">Сохранить</button>
+                <button class="modal-button modal-button-close" id="btnModalClose">Отмена</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
